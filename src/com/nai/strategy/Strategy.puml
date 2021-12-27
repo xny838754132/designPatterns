@@ -1,6 +1,8 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+title Strategy 策略模式
+
 class CashContext{
     -CashSuper cs;
     +CashContext(String type);

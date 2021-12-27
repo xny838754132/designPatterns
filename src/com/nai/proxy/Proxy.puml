@@ -1,6 +1,8 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+title Proxy代理模式
+
 interface Subject{
     +void request();
 }

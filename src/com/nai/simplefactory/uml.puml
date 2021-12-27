@@ -1,6 +1,8 @@
 @startuml
 'https://plantuml.com/sequence-diagra
 
+title SingleFactory 简单工厂模式
+
 abstract class Operation{
     double numberA
     double numberB
