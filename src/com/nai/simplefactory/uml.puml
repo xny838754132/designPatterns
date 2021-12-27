@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagra
+
+abstract class Operation{
+    double numberA
+    double numberB
+    double getResult()
+}
+class OperationFactory{
+    +Operation createOperate();
+}
+
+class OperationAdd extends Operation{
+    double getResult()
+}
+class OperationSub extends Operation{
+    double getResult()
+}
+class OperationMul extends Operation{
+    double getResult()
+}
+class OperationDiv extends Operation{
+    double getResult()
+}
+
+OperationFactory - Operation:createOperate >
+
+@enduml

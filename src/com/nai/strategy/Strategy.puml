@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class CashContext{
+    -CashSuper cs;
+    +CashContext(String type);
+    +double getResult(double money);
+}
+
+interface CashSuper{
+    +double acceptCash(double money);
+}
+
+class CashDiscount extends CashSuper{
+    -double moneyDiscount;
+    +double acceptCash(double money);
+}
+
+class CashNormal extends CashSuper{
+    +double acceptCash(double money);
+}
+
+class CashReturn extends CashSuper{
+    -double moneyCondition;
+    -double moneyReturn;
+    +double acceptCash(double money);
+}
+
+
+CashContext - CashSuper: create >
+
+
+
+@enduml
