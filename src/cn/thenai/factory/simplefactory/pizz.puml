@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Pizza{
+    +{abstract} prepare():void
+    +bake():void
+    +cut():void
+    +box():void
+}
+
+class CheesePizza extends Pizza{
+   +prepare():void
+}
+
+class GreekPizza extends Pizza{
+    +prepare():void
+}
+
+class PepperPizza extends Pizza{
+    +prepare():void
+}
+
+class OrderPizza
+class PizzaStore
+class SimpleFactory{
+    +{static}createPizza():Pizza
+}
+
+PizzaStore ..>OrderPizza
+OrderPizza o-- SimpleFactory
+SimpleFactory o-- Pizza
+
+@enduml
