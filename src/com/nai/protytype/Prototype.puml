@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+abstract class Prototype{
++clone()
+}
+
+class ConcretePrototype1 extends Prototype{
++clone()
+}
+
+class ConcretePrototype2 extends Prototype{
++clone()
+}
+
+Client --> Prototype : -Prototype
+
+note left of Prototype
+原型类,声明一个克隆自身的接口
+end note
+
+note left of Client
+让一个原型克隆自身从而创建一个新的对象
+end note
+
+note right of ConcretePrototype1
+具体圆形类,实现一个克隆自身的操作
+end note
+
+@enduml

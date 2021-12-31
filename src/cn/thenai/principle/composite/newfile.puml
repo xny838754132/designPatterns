@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class A{
++operation()
+}
+
+class B{
++operation(A a)
+}
+
+B --o A
+
+@enduml

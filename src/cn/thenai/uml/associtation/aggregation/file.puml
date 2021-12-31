@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Computer{
+    -mouse:Mouse
+    -monitor:Monitor
+}
+
+class Monitor
+
+class Mouse
+
+
+Mouse --o Computer
+Monitor --o Computer
+
+@enduml
