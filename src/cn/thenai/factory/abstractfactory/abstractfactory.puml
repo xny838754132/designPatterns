@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class Pizza{
+    +{abstract} prepare():void
+    +bake():void
+    +cut():void
+    +box():void
+}
+
+class BJCheesePizza extends Pizza{
+    +prepare():void
+ }
+
+ class BJPepperPizza extends Pizza{
+     +prepare():void
+ }
+
+ class LDCheesePizza extends Pizza{
+    +prepare():void
+ }
+
+ class LDPepperPizza extends Pizza{
+     +prepare():void
+ }
+
+interface AbsFactory{
+    +createPizza():Pizza
+}
+
+class BJFactory implements AbsFactory{
++createPizza():Pizza
+}
+
+class LDFactory implements AbsFactory{
++createPizza():Pizza
+}
+
+AbsFactory --o OrderPizza
+
+BJFactory ..> BJCheesePizza
+BJFactory ..> BJPepperPizza
+
+LDFactory ..> LDCheesePizza
+LDFactory ..> LDPepperPizza
+
+@enduml
