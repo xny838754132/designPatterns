@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class House
+
+abstract class HouseBuilder{
+-house:House
++{abstract}buildBasic():void
++{abstract}buildWalls():void
++{abstract}roofed():void
++buildHouse():House
+}
+
+class CommonHouse extends HouseBuilder{
++buildBasic():void
++buildWalls():void
++roofed():void
++buildHouse():House
+}
+
+class HighHouse extends HouseBuilder{
++buildBasic():void
++buildWalls():void
++roofed():void
++buildHouse():House
+}
+
+class HouseDirector{
+-houseBuilder:HouseBuilder
+}
+
+note right of House
+ 产品
+end note
+
+House --* HouseBuilder
+HouseBuilder --o HouseDirector
+Client ..> HouseDirector
+Client ..>CommonHouse
+Client ..>HighHouse
+
+@enduml

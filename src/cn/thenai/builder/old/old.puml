@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractHouse{
+    +{abstract}  buildBasic():void
+    +{abstract}  buildBasic()void
+    +{abstract}  buildBasic()void
+    +build():void
+}
+
+class CommonHouse extends AbstractHouse
+
+@enduml
