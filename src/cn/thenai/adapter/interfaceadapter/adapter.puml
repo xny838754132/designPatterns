@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface interface1{
++operation1():void
++operation2():void
++operation3():void
++operation4():void
+}
+
+abstract class AbsA implements interface1{
++operation1():void
++operation2():void
++operation3():void
++operation4():void
+}
+
+note left of AbsA
+AbsA抽象类
+默认实现接口的所有方法
+end note
+
+@enduml
