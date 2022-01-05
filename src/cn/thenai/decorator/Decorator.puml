@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Drink{
+-desc:String
+-price:double
++{abstract}cost():double
+}
+
+class Coffee extends Drink{
++cost():double
+}
+
+class LongBlack extends Coffee{
++<constructor>
+}
+
+class Espresso extends Coffee{
++<constructor>
+}
+
+class ShortBlack extends Coffee{
++<constructor>
+}
+
+class Decorator extends Drink{
+-drink:Drink
++<constructor>
+}
+
+class Chocolate extends Decorator
+class Milk extends Decorator
+class Soy extends Decorator
+
+Decorator o-- Drink
+
+
+@enduml
